@@ -22,14 +22,13 @@ public class KafkaStudentServiceImpl implements KafkaStudentService {
 
     @Override
     public StudentDTO createStudent(StudentDTO studentDTO) {
-        Integer partition = UUID.randomUUID().hashCode();
         String key = UUID.randomUUID().toString();
 
         KafkaTemplate<String, Object> kafkaTemplate = kafkaConfig.kafkaTemplate();
         String studentsTopic = kafkaConfig.getStudentsTopic();
         CompletableFuture<SendResult<String, Object>> completableFuture =
 
-                kafkaTemplate.send(studentsTopic, partition, key, studentDTO);
+                kafkaTemplate.send(studentsTopic, key, studentDTO);
 
         completableFuture.whenComplete((stringObjectSendResult, throwable) -> {
             if (throwable == null) {
