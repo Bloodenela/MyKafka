@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {
-                "ru.shtyrev.StudentDataService",
-                "ru.shtyrev.StudentEntityService"
+                "org.example.StudentDataService",
+                "org.example.StudentEntityService"
         })
 public class StudentDataServiceApplication {
     public static void main(String[] args) {
