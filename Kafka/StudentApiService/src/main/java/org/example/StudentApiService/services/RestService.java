@@ -4,11 +4,7 @@ import org.example.StudentEntityService.dtos.*;
 
 import java.util.List;
 
-public interface StudentService {
-    StudentDTO createStudent(StudentDTO studentDTO);
-
-    void addMark(Long studentId, MarkDTO markDTO);
-
+public interface RestService {
     List<StudentDTO> findAllStudents();
 
     List<StudentDTO> findAllExcellentStudents();

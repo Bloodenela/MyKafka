@@ -1,5 +1,6 @@
 package org.example.StudentApiService.configs;
 
+import lombok.Getter;
 import lombok.Setter;
 import org.apache.kafka.clients.admin.AdminClientConfig;
 import org.apache.kafka.clients.admin.NewTopic;
@@ -19,6 +20,7 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 import java.util.HashMap;
 import java.util.Map;
 
+@Getter
 @Setter
 @Configuration
 @ConfigurationProperties(prefix = "spring.kafka")
