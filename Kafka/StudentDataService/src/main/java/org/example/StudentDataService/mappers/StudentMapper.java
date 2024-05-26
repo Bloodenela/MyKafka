@@ -8,7 +8,7 @@ import org.mapstruct.AfterMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
-import ru.shtyrev.StudentDataService.entities.*;
+import org.example.StudentDataService.entities.*;
 
 import java.util.ArrayList;
 import java.util.List;
